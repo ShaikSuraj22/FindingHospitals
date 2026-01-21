@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/2457259/OneDrive - Cognizant/Desktop/FindingHospitals">
+        <classes>
+            <class name="testCases.BaseTest"/>
+            <class name="testCases.Tc001_LoginTest"/>
+            <class name="testCases.Tc002_EnterCredentials"/>
+            <class name="testCases.Tc004_HealthAndWellnessPlan"/>
+            <class name="testCases.Tc005_FormFillingTest"/>
+            <class name="testCases.Tc003_SearchFunctionalityTest"/>
+        </classes>
+    </test>
+</suite>
