@@ -22,6 +22,7 @@ public class FillingFormAndCapture extends  BasePage{
     By inputOfficialEmailId = By.xpath("//input[@id='officialEmailId']");
     By organizationSize = By.xpath("//select[@id='organizationSize']");
     By intrestedIn = By.xpath("//select[@id='interestedIn']");
+    By scheduleDemoButton = By.xpath("//button[text()='Schedule a demo']");
     Select select;
 
     //Methods
@@ -56,6 +57,10 @@ public class FillingFormAndCapture extends  BasePage{
         File f = ts.getScreenshotAs(OutputType.FILE);
         File file = new File(filePath);
         f.renameTo(file);
+    }
+
+    public boolean isEnabledScheduleDemoButton() {
+        return driver.findElement(scheduleDemoButton).isEnabled();
     }
 
     public void gotoPreviousPage() {

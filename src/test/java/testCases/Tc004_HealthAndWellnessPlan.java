@@ -10,5 +10,6 @@ public class Tc004_HealthAndWellnessPlan extends BaseTest {
         HealthAndWellnessplans hw = new HealthAndWellnessplans(driver);
         hw.clickOnDropdown();
         hw.selectHealthAndWellnessPlans();
+
     }
 }
