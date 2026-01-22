@@ -5,7 +5,7 @@ import pageObjects.HealthAndWellnessplans;
 
 public class Tc004_HealthAndWellnessPlan extends BaseTest {
 
-    @Test(priority = 3)
+    @Test(priority = 1)
     public void healthAndWellnessPlanTest() {
         HealthAndWellnessplans hw = new HealthAndWellnessplans(driver);
         hw.clickOnDropdown();

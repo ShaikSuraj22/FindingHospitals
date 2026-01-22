@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-22T17:25:30 IST" name="All Test Suite" finished-at="2026-01-22T17:26:25 IST" duration-ms="55133">
+    <groups>
+    </groups>
+    <test started-at="2026-01-22T17:25:30 IST" name="C:/Users/2457259/OneDrive - Cognizant/Desktop/FindingHospitals" finished-at="2026-01-22T17:26:25 IST" duration-ms="55133">
+      <class name="testCases.Tc005_FormFillingTest">
+        <test-method signature="formFillingTest()[pri:1, instance:testCases.Tc005_FormFillingTest@3c41ed1d]" started-at="2026-01-22T17:25:42 IST" name="formFillingTest" finished-at="2026-01-22T17:25:45 IST" duration-ms="3626" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- formFillingTest -->
+      </class> <!-- testCases.Tc005_FormFillingTest -->
+      <class name="testCases.BaseTest">
+        <test-method is-config="true" signature="createDriverOnce()[pri:0, instance:testCases.BaseTest@14cd1699]" started-at="2026-01-22T17:25:19 IST" name="createDriverOnce" finished-at="2026-01-22T17:25:30 IST" duration-ms="10507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createDriverOnce -->
+      </class> <!-- testCases.BaseTest -->
+      <class name="testCases.Tc003_SearchFunctionalityTest">
+        <test-method signature="locationAndSearchHospitalTest()[pri:1, instance:testCases.Tc003_SearchFunctionalityTest@2d1ef81a]" started-at="2026-01-22T17:25:45 IST" name="locationAndSearchHospitalTest" finished-at="2026-01-22T17:25:56 IST" duration-ms="10119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- locationAndSearchHospitalTest -->
+      </class> <!-- testCases.Tc003_SearchFunctionalityTest -->
+      <class name="testCases.Tc006_ListOfHospitals">
+        <test-method signature="testFilterCardiologyHospitals()[pri:1, instance:testCases.Tc006_ListOfHospitals@5542c4ed]" started-at="2026-01-22T17:25:56 IST" name="testFilterCardiologyHospitals" finished-at="2026-01-22T17:25:59 IST" duration-ms="3491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFilterCardiologyHospitals -->
+        <test-method signature="isdisplayed()[pri:2, instance:testCases.Tc006_ListOfHospitals@5542c4ed]" started-at="2026-01-22T17:25:59 IST" name="isdisplayed" finished-at="2026-01-22T17:26:21 IST" duration-ms="21564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isdisplayed -->
+        <test-method signature="testListOfHospitals()[pri:3, instance:testCases.Tc006_ListOfHospitals@5542c4ed]" started-at="2026-01-22T17:26:21 IST" name="testListOfHospitals" finished-at="2026-01-22T17:26:22 IST" duration-ms="1584" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListOfHospitals -->
+        <test-method signature="writeIntoExcel()[pri:4, instance:testCases.Tc006_ListOfHospitals@5542c4ed]" started-at="2026-01-22T17:26:22 IST" name="writeIntoExcel" finished-at="2026-01-22T17:26:25 IST" duration-ms="2754" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeIntoExcel -->
+      </class> <!-- testCases.Tc006_ListOfHospitals -->
+      <class name="testCases.Tc001_LoginTest">
+        <test-method signature="loginTest()[pri:1, instance:testCases.Tc001_LoginTest@6b2ea799]" started-at="2026-01-22T17:25:30 IST" name="loginTest" finished-at="2026-01-22T17:25:30 IST" duration-ms="428" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+      </class> <!-- testCases.Tc001_LoginTest -->
+      <class name="testCases.Tc004_HealthAndWellnessPlan">
+        <test-method signature="healthAndWellnessPlanTest()[pri:1, instance:testCases.Tc004_HealthAndWellnessPlan@6c6cb480]" started-at="2026-01-22T17:25:38 IST" name="healthAndWellnessPlanTest" finished-at="2026-01-22T17:25:42 IST" duration-ms="3958" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- healthAndWellnessPlanTest -->
+      </class> <!-- testCases.Tc004_HealthAndWellnessPlan -->
+      <class name="testCases.Tc002_EnterCredentials">
+        <test-method signature="enterCredentials()[pri:1, instance:testCases.Tc002_EnterCredentials@175c2241]" started-at="2026-01-22T17:25:30 IST" name="enterCredentials" finished-at="2026-01-22T17:25:38 IST" duration-ms="7512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterCredentials -->
+      </class> <!-- testCases.Tc002_EnterCredentials -->
+    </test> <!-- C:/Users/2457259/OneDrive - Cognizant/Desktop/FindingHospitals -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

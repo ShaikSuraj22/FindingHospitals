@@ -9,7 +9,7 @@ public class Tc002_EnterCredentials extends BaseTest {
 
 
 
-    @Test(priority = 2)
+    @Test(priority = 1)
     public void enterCredentials(){
         EnterCrendentials ec = new EnterCrendentials(driver);
         ec.enterEmail("6304948369");

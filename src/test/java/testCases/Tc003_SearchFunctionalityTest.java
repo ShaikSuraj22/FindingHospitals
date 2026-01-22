@@ -5,7 +5,7 @@ import pageObjects.SearchFunctionality;
 
 public class Tc003_SearchFunctionalityTest extends BaseTest {
 
-    @Test(priority = 5)
+    @Test(priority = 1)
     public void  locationAndSearchHospitalTest() {
         SearchFunctionality sf = new SearchFunctionality(driver);
         sf.enterLocation("Banga");

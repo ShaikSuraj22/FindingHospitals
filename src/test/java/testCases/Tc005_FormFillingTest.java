@@ -6,7 +6,7 @@ import pageObjects.FillingFormAndCapture;
 
 public class Tc005_FormFillingTest extends BaseTest {
 
-    @Test(priority = 4)
+    @Test(priority = 1)
     public void formFillingTest() {
         FillingFormAndCapture ffc = new FillingFormAndCapture(driver);
         ffc.enterName("Suraj");

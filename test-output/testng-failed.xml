@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="C:/Users/2457259/OneDrive - Cognizant/Desktop/FindingHospitals(failed)">
+    <classes>
+      <class name="testCases.Tc006_ListOfHospitals">
+        <methods>
+          <include name="testListOfHospitals"/>
+          <include name="testFilterCardiologyHospitals"/>
+          <include name="createDriverOnce"/>
+          <include name="isdisplayed"/>
+        </methods>
+      </class> <!-- testCases.Tc006_ListOfHospitals -->
+      <class name="testCases.Tc004_HealthAndWellnessPlan">
+        <methods>
+          <include name="healthAndWellnessPlanTest"/>
+          <include name="createDriverOnce"/>
+        </methods>
+      </class> <!-- testCases.Tc004_HealthAndWellnessPlan -->
+      <class name="testCases.Tc005_FormFillingTest">
+        <methods>
+          <include name="formFillingTest"/>
+          <include name="createDriverOnce"/>
+        </methods>
+      </class> <!-- testCases.Tc005_FormFillingTest -->
+      <class name="testCases.Tc002_EnterCredentials">
+        <methods>
+          <include name="enterCredentials"/>
+          <include name="createDriverOnce"/>
+        </methods>
+      </class> <!-- testCases.Tc002_EnterCredentials -->
+      <class name="testCases.Tc003_SearchFunctionalityTest">
+        <methods>
+          <include name="locationAndSearchHospitalTest"/>
+          <include name="createDriverOnce"/>
+        </methods>
+      </class> <!-- testCases.Tc003_SearchFunctionalityTest -->
+    </classes>
+  </test> <!-- C:/Users/2457259/OneDrive - Cognizant/Desktop/FindingHospitals(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

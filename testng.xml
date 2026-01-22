@@ -9,6 +9,7 @@
             <class name="testCases.Tc004_HealthAndWellnessPlan"/>
             <class name="testCases.Tc005_FormFillingTest"/>
             <class name="testCases.Tc003_SearchFunctionalityTest"/>
+            <class name="testCases.Tc006_ListOfHospitals"/>
         </classes>
     </test>
 </suite>
