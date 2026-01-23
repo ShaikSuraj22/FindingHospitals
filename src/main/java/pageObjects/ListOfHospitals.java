@@ -6,7 +6,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -26,6 +25,8 @@ public class ListOfHospitals extends BasePage {
     By hospitalCards = By.xpath("//div[contains(@class,'c-estb-card')]");
     By nameInCard = By.cssSelector(".c-estb-info h2");
     By ratingInCard = By.xpath("//div[@class='text-1']//span");
+    //   Correct locator (TEXT, NOT title)
+    By hospital = By.xpath("//h2[normalize-space()='Brains Super Speciality Hospital']");
 //    By open24x7Exact = By.xpath("//span[@class='pd-right-2px-text-green']");
 //    By isShowingOrNot = By.xpath("//h2[normalize-space()='East Point Hospital']");
 
@@ -77,9 +78,6 @@ public class ListOfHospitals extends BasePage {
             } catch (InterruptedException ignored) {
             }
         }
-
-        //   Correct locator (TEXT, NOT title)
-        By hospital = By.xpath("//h2[normalize-space()='Brains Super Speciality Hospital']");
 
         //  Wait for element to appear in DOM
         wait.until(ExpectedConditions.presenceOfElementLocated(hospital));

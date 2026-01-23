@@ -10,6 +10,7 @@
             <class name="testCases.Tc005_FormFillingTest"/>
             <class name="testCases.Tc003_SearchFunctionalityTest"/>
             <class name="testCases.Tc006_ListOfHospitals"/>
+            <class name="testCases.Tc007_StoringCities"/>
         </classes>
     </test>
 </suite>
