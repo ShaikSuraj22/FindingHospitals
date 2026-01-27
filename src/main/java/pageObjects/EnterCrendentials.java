@@ -21,6 +21,8 @@ public class EnterCrendentials extends BasePage {
 
 
     //Methods
+
+    //Entering email and password
     public void enterEmail(String email) {
         // Wait for the email field to be visible, then type
         new WebDriverWait(driver, Duration.ofSeconds(10))
@@ -33,6 +35,7 @@ public class EnterCrendentials extends BasePage {
 
     }
 
+    //Clicking on login button
     public void clickOnLoginButton() {
         driver.findElement(loginButton).click();
     }

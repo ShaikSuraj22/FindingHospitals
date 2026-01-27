@@ -24,22 +24,24 @@ public class StoringCities extends BasePage {
     By clickOnLogo = By.xpath("//span[@class='practo-logo']//a");
     By clickOnLabTests = By.xpath("//a[@href='https://www.practo.com/tests']");
 
+    //Methods
+
+    //Clicking on logo, for like going to home page
     public void clickOnLogo() {
         driver.findElement(clickOnLogo).click();
     }
+    //Clicking on Lab Tests
     public void clickOnLabTests() {
         driver.findElement(clickOnLabTests).click();
     }
 
-//    public void clickOnSelectCity() {
-//        new WebDriverWait(driver, Duration.ofSeconds(10))
-//                .until(ExpectedConditions.presenceOfElementLocated(selectCity)).click();
-////        driver.findElement(selectCity).click();
-//    }
-
+    //Storing city names into a list
     public List<String> storingCityNamesIntoList() {
         List<String> cityNames = new ArrayList<>();
         for (int i = 1; i <100 ; i++) {
+            // here i is used to iterate through the list of cities
+            // for every city having the same xpath, so what i have done is that, storing first sibling xpath in a variable
+            // and use the index to iterate through all the siblings
             WebElement name = driver.findElement(By.xpath("//div[@class='u-margintb--std--half o-f-color--subtle u-font-bold']//following-sibling::div["+i+"]"));
             String cityName = name.getText();
             System.out.println(cityName);
@@ -49,6 +51,7 @@ public class StoringCities extends BasePage {
 
     }
 
+    //Pushing city names into excel
     public void pushingNamesIntoExcel() throws IOException {
         List<String> cities = storingCityNamesIntoList();
         FileOutputStream file = new FileOutputStream("C:\\Users\\2457259\\OneDrive - Cognizant\\Desktop\\FindingHospitals\\ExcelData\\CityNames.xlsx");

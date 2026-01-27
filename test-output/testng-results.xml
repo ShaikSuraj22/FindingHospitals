@@ -2,66 +2,66 @@
 <testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-23T16:57:47 IST" name="All Test Suite" finished-at="2026-01-23T16:58:37 IST" duration-ms="49360">
+  <suite started-at="2026-01-27T09:31:35 IST" name="All Test Suite" finished-at="2026-01-27T09:32:28 IST" duration-ms="53231">
     <groups>
     </groups>
-    <test started-at="2026-01-23T16:57:47 IST" name="C:/Users/2457259/OneDrive - Cognizant/Desktop/FindingHospitals" finished-at="2026-01-23T16:58:37 IST" duration-ms="49360">
+    <test started-at="2026-01-27T09:31:35 IST" name="C:/Users/2457259/OneDrive - Cognizant/Desktop/FindingHospitals" finished-at="2026-01-27T09:32:28 IST" duration-ms="53231">
       <class name="testCases.Tc005_FormFillingTest">
-        <test-method signature="formFillingTest()[pri:1, instance:testCases.Tc005_FormFillingTest@3754a4bf]" started-at="2026-01-23T16:57:57 IST" name="formFillingTest" finished-at="2026-01-23T16:58:01 IST" duration-ms="3834" status="PASS">
+        <test-method signature="formFillingTest()[pri:1, instance:testCases.Tc005_FormFillingTest@5b7a5baa]" started-at="2026-01-27T09:31:44 IST" name="formFillingTest" finished-at="2026-01-27T09:31:47 IST" duration-ms="3804" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- formFillingTest -->
       </class> <!-- testCases.Tc005_FormFillingTest -->
       <class name="testCases.BaseTest">
-        <test-method is-config="true" signature="createDriverOnce()[pri:0, instance:testCases.BaseTest@6f1de4c7]" started-at="2026-01-23T16:57:42 IST" name="createDriverOnce" finished-at="2026-01-23T16:57:47 IST" duration-ms="5760" status="PASS">
+        <test-method is-config="true" signature="createDriverOnce()[pri:0, instance:testCases.BaseTest@4d5d943d]" started-at="2026-01-27T09:31:28 IST" name="createDriverOnce" finished-at="2026-01-27T09:31:35 IST" duration-ms="6488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriverOnce -->
       </class> <!-- testCases.BaseTest -->
       <class name="testCases.Tc007_StoringCities">
-        <test-method signature="clickOnLogoTest()[pri:1, instance:testCases.Tc007_StoringCities@40a4337a]" started-at="2026-01-23T16:58:27 IST" name="clickOnLogoTest" finished-at="2026-01-23T16:58:37 IST" duration-ms="9283" status="PASS">
+        <test-method signature="clickOnLogoTest()[pri:1, instance:testCases.Tc007_StoringCities@327514f]" started-at="2026-01-27T09:32:14 IST" name="clickOnLogoTest" finished-at="2026-01-27T09:32:28 IST" duration-ms="13860" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnLogoTest -->
       </class> <!-- testCases.Tc007_StoringCities -->
       <class name="testCases.Tc003_SearchFunctionalityTest">
-        <test-method signature="locationAndSearchHospitalTest()[pri:1, instance:testCases.Tc003_SearchFunctionalityTest@75d4a5c2]" started-at="2026-01-23T16:58:01 IST" name="locationAndSearchHospitalTest" finished-at="2026-01-23T16:58:12 IST" duration-ms="10691" status="PASS">
+        <test-method signature="locationAndSearchHospitalTest()[pri:1, instance:testCases.Tc003_SearchFunctionalityTest@c730b35]" started-at="2026-01-27T09:31:47 IST" name="locationAndSearchHospitalTest" finished-at="2026-01-27T09:31:57 IST" duration-ms="9898" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- locationAndSearchHospitalTest -->
       </class> <!-- testCases.Tc003_SearchFunctionalityTest -->
       <class name="testCases.Tc006_ListOfHospitals">
-        <test-method signature="testFilterCardiologyHospitals()[pri:1, instance:testCases.Tc006_ListOfHospitals@36ebc363]" started-at="2026-01-23T16:58:12 IST" name="testFilterCardiologyHospitals" finished-at="2026-01-23T16:58:15 IST" duration-ms="3239" status="PASS">
+        <test-method signature="testFilterCardiologyHospitals()[pri:1, instance:testCases.Tc006_ListOfHospitals@38425407]" started-at="2026-01-27T09:31:57 IST" name="testFilterCardiologyHospitals" finished-at="2026-01-27T09:32:01 IST" duration-ms="3479" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFilterCardiologyHospitals -->
-        <test-method signature="isdisplayed()[pri:2, instance:testCases.Tc006_ListOfHospitals@36ebc363]" started-at="2026-01-23T16:58:15 IST" name="isdisplayed" finished-at="2026-01-23T16:58:24 IST" duration-ms="8889" status="PASS">
+        <test-method signature="isdisplayed()[pri:2, instance:testCases.Tc006_ListOfHospitals@38425407]" started-at="2026-01-27T09:32:01 IST" name="isdisplayed" finished-at="2026-01-27T09:32:10 IST" duration-ms="8994" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isdisplayed -->
-        <test-method signature="testListOfHospitals()[pri:3, instance:testCases.Tc006_ListOfHospitals@36ebc363]" started-at="2026-01-23T16:58:24 IST" name="testListOfHospitals" finished-at="2026-01-23T16:58:25 IST" duration-ms="1455" status="PASS">
+        <test-method signature="testListOfHospitals()[pri:3, instance:testCases.Tc006_ListOfHospitals@38425407]" started-at="2026-01-27T09:32:10 IST" name="testListOfHospitals" finished-at="2026-01-27T09:32:11 IST" duration-ms="1655" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testListOfHospitals -->
-        <test-method signature="writeIntoExcel()[pri:4, instance:testCases.Tc006_ListOfHospitals@36ebc363]" started-at="2026-01-23T16:58:25 IST" name="writeIntoExcel" finished-at="2026-01-23T16:58:27 IST" duration-ms="2227" status="PASS">
+        <test-method signature="writeIntoExcel()[pri:4, instance:testCases.Tc006_ListOfHospitals@38425407]" started-at="2026-01-27T09:32:11 IST" name="writeIntoExcel" finished-at="2026-01-27T09:32:14 IST" duration-ms="2908" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeIntoExcel -->
       </class> <!-- testCases.Tc006_ListOfHospitals -->
       <class name="testCases.Tc001_LoginTest">
-        <test-method signature="loginTest()[pri:1, instance:testCases.Tc001_LoginTest@59474f18]" started-at="2026-01-23T16:57:47 IST" name="loginTest" finished-at="2026-01-23T16:57:48 IST" duration-ms="798" status="PASS">
+        <test-method signature="loginTest()[pri:1, instance:testCases.Tc001_LoginTest@41d477ed]" started-at="2026-01-27T09:31:35 IST" name="loginTest" finished-at="2026-01-27T09:31:36 IST" duration-ms="473" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
       </class> <!-- testCases.Tc001_LoginTest -->
       <class name="testCases.Tc004_HealthAndWellnessPlan">
-        <test-method signature="healthAndWellnessPlanTest()[pri:1, instance:testCases.Tc004_HealthAndWellnessPlan@5e0e82ae]" started-at="2026-01-23T16:57:54 IST" name="healthAndWellnessPlanTest" finished-at="2026-01-23T16:57:57 IST" duration-ms="3086" status="PASS">
+        <test-method signature="healthAndWellnessPlanTest()[pri:1, instance:testCases.Tc004_HealthAndWellnessPlan@2b71e916]" started-at="2026-01-27T09:31:37 IST" name="healthAndWellnessPlanTest" finished-at="2026-01-27T09:31:44 IST" duration-ms="6726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- healthAndWellnessPlanTest -->
       </class> <!-- testCases.Tc004_HealthAndWellnessPlan -->
       <class name="testCases.Tc002_EnterCredentials">
-        <test-method signature="enterCredentials()[pri:1, instance:testCases.Tc002_EnterCredentials@515c6049]" started-at="2026-01-23T16:57:48 IST" name="enterCredentials" finished-at="2026-01-23T16:57:54 IST" duration-ms="5761" status="PASS">
+        <test-method signature="enterCredentials()[pri:1, instance:testCases.Tc002_EnterCredentials@74235045]" started-at="2026-01-27T09:31:36 IST" name="enterCredentials" finished-at="2026-01-27T09:31:37 IST" duration-ms="1318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterCredentials -->

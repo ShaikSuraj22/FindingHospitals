@@ -15,6 +15,7 @@ public class ClickOnLogin extends BasePage {
 
 
     //Methods
+    //Clicking on login page button
     public void clickOnLoginPageButton() {
         driver.findElement(loginPageButton).click();
     }

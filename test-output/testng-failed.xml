@@ -3,12 +3,14 @@
 <suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="C:/Users/2457259/OneDrive - Cognizant/Desktop/FindingHospitals(failed)">
     <classes>
-      <class name="testCases.Tc007_StoringCities">
+      <class name="testCases.Tc006_ListOfHospitals">
         <methods>
-          <include name="clickOnLogoTest"/>
+          <include name="testListOfHospitals"/>
+          <include name="writeIntoExcel"/>
+          <include name="isdisplayed"/>
           <include name="createDriverOnce"/>
         </methods>
-      </class> <!-- testCases.Tc007_StoringCities -->
+      </class> <!-- testCases.Tc006_ListOfHospitals -->
     </classes>
   </test> <!-- C:/Users/2457259/OneDrive - Cognizant/Desktop/FindingHospitals(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

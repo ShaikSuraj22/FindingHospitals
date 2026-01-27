@@ -17,10 +17,13 @@ public class HealthAndWellnessplans extends BasePage {
 
 
     //Methods
+
+    //Clicking on dropdown
     public void clickOnDropdown() {
         driver.findElement(clickOnDropdown).click();
     }
 
+    //Selecting Health and Wellness Plans
     public void selectHealthAndWellnessPlans() {
         driver.findElement(selectHealthAndWellnessPlans).click();
     }

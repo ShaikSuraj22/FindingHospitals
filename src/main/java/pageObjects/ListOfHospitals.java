@@ -26,34 +26,39 @@ public class ListOfHospitals extends BasePage {
     By nameInCard = By.cssSelector(".c-estb-info h2");
     By ratingInCard = By.xpath("//div[@class='text-1']//span");
     //   Correct locator (TEXT, NOT title)
+    //   after scrolling and waiting for this particular hospital to appear and click on it for loading many hospital names
     By hospital = By.xpath("//h2[normalize-space()='Brains Super Speciality Hospital']");
-//    By open24x7Exact = By.xpath("//span[@class='pd-right-2px-text-green']");
-//    By isShowingOrNot = By.xpath("//h2[normalize-space()='East Point Hospital']");
+
 
 
     //Methods
+
+    //Get list of hospitals open 24x7 with rating above 3.5
     public List<String> getHospitalsOpen247WithRatingAbove35() {
 
+        // Wait for hospital cards to load
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.presenceOfElementLocated(hospitalCards));
 
+        // Find all hospital cards
         List<WebElement> cards = driver.findElements(hospitalCards);
+
+        // List to store qualified hospital names
         List<String> qualified = new ArrayList<>();
 
+        // Iterate through each card
         for (int i = 0; i < cards.size(); i++) {
+            //In each card, find name, rating and 24x7 status
             WebElement card = cards.get(i);
             WebElement rating = card.findElement(ratingInCard);
             WebElement nameEl = card.findElement(nameInCard);
-//            WebElement open24By7 = card.findElement(open24x7Exact);
             String hospitalName = nameEl.getText().trim();
             String rate = rating.getText().trim();
 
-            //This is not Working as the locator is not correct for 24x7
-//            String open24 = open24By7.getText().trim();
-//            System.out.println("Hospital: " + hospitalName + ", Rating: " + rate  + " "+ open24);
-
+            // Check if rating is above 3.5
             double val = Double.parseDouble(rate);
             if (val > 3.5) {
+                // Add hospital name to the list
                 qualified.add(hospitalName);
             }
         }
@@ -61,17 +66,21 @@ public class ListOfHospitals extends BasePage {
 
     }
 
+    //Click on Cardiology Hospitals filter
     public void clickOnCardiologyHospitalsFilter() {
         driver.findElement(clickOnCardiologyHospitalsFilter).click();
     }
 
+    // Check if specific hospital is showing and click on it
     public void isHospitalShowing() {
-
+        //  Explicit wait
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+        //  Javascript Executor
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         //   Force scroll to load hospital cards
         for (int i = 0; i < 12; i++) {
+            // scrolling down by 600 pixels in each iteration to load more content dynamically.
             js.executeScript("window.scrollBy(0,600);");
             try {
                 Thread.sleep(700); // allow lazy load
@@ -91,7 +100,7 @@ public class ListOfHospitals extends BasePage {
 
     }
 
-
+    // Now after clicking on hospital, switch to new tab and close it to go back to previous page
     public void backToPreviousPage() {
         Set<String> s = driver.getWindowHandles();
         List<String> li = new ArrayList<>(s);
@@ -102,6 +111,7 @@ public class ListOfHospitals extends BasePage {
 //        driver.findElement(By.xpath("//h2[@title='Pathway Hospitals']")).click();
     }
 
+    //Writing hospital names to Excel file
     public void writeHospitalNamesToExcel() throws IOException {
         List<String> hospitalNames = getHospitalsOpen247WithRatingAbove35();
         FileOutputStream file = new FileOutputStream("C:\\Users\\2457259\\OneDrive - Cognizant\\Desktop\\FindingHospitals\\ExcelData\\HospitalsList.xlsx");

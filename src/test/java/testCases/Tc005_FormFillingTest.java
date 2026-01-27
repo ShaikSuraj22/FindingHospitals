@@ -20,6 +20,7 @@ public class Tc005_FormFillingTest extends BaseTest {
             ffc.takeScreenshot("C:\\Users\\2457259\\OneDrive - Cognizant\\Desktop\\FindingHospitals\\Screenshot\\screenshot2.png");
             Assert.assertFalse(isButtonEnabled,"Button is not enabled");
         }
+        // Navigate back to the previous page, After taking screenshot
         ffc.gotoPreviousPage();
 
     }

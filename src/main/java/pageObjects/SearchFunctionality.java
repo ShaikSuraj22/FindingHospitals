@@ -21,22 +21,27 @@ public class SearchFunctionality extends BasePage {
     By suggestionForHospital = By.xpath("//div[text()='Hospital']");
 
     //Methods
+
+    //Entering location
     public void enterLocation(String location) {
         driver.findElement(locationSearchBox).clear();
         driver.findElement(locationSearchBox).sendKeys(location);
     }
 
+    //Selecting location suggestion
     public void selectSuggestion() {
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.visibilityOfElementLocated(suggestionForLocation))
                 .click();
     }
 
+    //Entering hospital name
     public void enterHospitalName(String hospitalName) {
         driver.findElement(searchHospitals).clear();
         driver.findElement(searchHospitals).sendKeys(hospitalName);
     }
 
+    //Selecting hospital suggestion
     public void selectHospitalSuggestion() {
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.visibilityOfElementLocated(suggestionForHospital))
