@@ -1,67 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-27T09:31:35 IST" name="All Test Suite" finished-at="2026-01-27T09:32:28 IST" duration-ms="53231">
+  <suite started-at="2026-02-02T10:00:36 IST" name="All Test Suite" finished-at="2026-02-02T10:01:31 IST" duration-ms="54410">
     <groups>
     </groups>
-    <test started-at="2026-01-27T09:31:35 IST" name="C:/Users/2457259/OneDrive - Cognizant/Desktop/FindingHospitals" finished-at="2026-01-27T09:32:28 IST" duration-ms="53231">
+    <test started-at="2026-02-02T10:00:36 IST" name="C:/Users/2457259/OneDrive - Cognizant/Desktop/FindingHospitals" finished-at="2026-02-02T10:01:31 IST" duration-ms="54410">
       <class name="testCases.Tc005_FormFillingTest">
-        <test-method signature="formFillingTest()[pri:1, instance:testCases.Tc005_FormFillingTest@5b7a5baa]" started-at="2026-01-27T09:31:44 IST" name="formFillingTest" finished-at="2026-01-27T09:31:47 IST" duration-ms="3804" status="PASS">
+        <test-method signature="formFillingTest()[pri:1, instance:testCases.Tc005_FormFillingTest@1a38ba58]" started-at="2026-02-02T10:00:48 IST" name="formFillingTest" finished-at="2026-02-02T10:00:52 IST" duration-ms="3714" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- formFillingTest -->
       </class> <!-- testCases.Tc005_FormFillingTest -->
       <class name="testCases.BaseTest">
-        <test-method is-config="true" signature="createDriverOnce()[pri:0, instance:testCases.BaseTest@4d5d943d]" started-at="2026-01-27T09:31:28 IST" name="createDriverOnce" finished-at="2026-01-27T09:31:35 IST" duration-ms="6488" status="PASS">
+        <test-method is-config="true" signature="createDriverOnce()[pri:0, instance:testCases.BaseTest@3e7dd664]" started-at="2026-02-02T10:00:30 IST" name="createDriverOnce" finished-at="2026-02-02T10:00:36 IST" duration-ms="6085" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriverOnce -->
+        <test-method is-config="true" signature="tearDownOnce()[pri:0, instance:testCases.BaseTest@3e7dd664]" started-at="2026-02-02T10:01:33 IST" name="tearDownOnce" finished-at="2026-02-02T10:01:39 IST" duration-ms="5512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownOnce -->
       </class> <!-- testCases.BaseTest -->
       <class name="testCases.Tc007_StoringCities">
-        <test-method signature="clickOnLogoTest()[pri:1, instance:testCases.Tc007_StoringCities@327514f]" started-at="2026-01-27T09:32:14 IST" name="clickOnLogoTest" finished-at="2026-01-27T09:32:28 IST" duration-ms="13860" status="PASS">
+        <test-method signature="clickOnLogoTest()[pri:1, instance:testCases.Tc007_StoringCities@62577d6]" started-at="2026-02-02T10:01:19 IST" name="clickOnLogoTest" finished-at="2026-02-02T10:01:31 IST" duration-ms="11312" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnLogoTest -->
       </class> <!-- testCases.Tc007_StoringCities -->
       <class name="testCases.Tc003_SearchFunctionalityTest">
-        <test-method signature="locationAndSearchHospitalTest()[pri:1, instance:testCases.Tc003_SearchFunctionalityTest@c730b35]" started-at="2026-01-27T09:31:47 IST" name="locationAndSearchHospitalTest" finished-at="2026-01-27T09:31:57 IST" duration-ms="9898" status="PASS">
+        <test-method signature="locationAndSearchHospitalTest()[pri:1, instance:testCases.Tc003_SearchFunctionalityTest@6754ef00]" started-at="2026-02-02T10:00:52 IST" name="locationAndSearchHospitalTest" finished-at="2026-02-02T10:00:59 IST" duration-ms="7526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- locationAndSearchHospitalTest -->
       </class> <!-- testCases.Tc003_SearchFunctionalityTest -->
       <class name="testCases.Tc006_ListOfHospitals">
-        <test-method signature="testFilterCardiologyHospitals()[pri:1, instance:testCases.Tc006_ListOfHospitals@38425407]" started-at="2026-01-27T09:31:57 IST" name="testFilterCardiologyHospitals" finished-at="2026-01-27T09:32:01 IST" duration-ms="3479" status="PASS">
+        <test-method signature="testFilterCardiologyHospitals()[pri:1, instance:testCases.Tc006_ListOfHospitals@27a0a5a2]" started-at="2026-02-02T10:00:59 IST" name="testFilterCardiologyHospitals" finished-at="2026-02-02T10:01:03 IST" duration-ms="3964" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFilterCardiologyHospitals -->
-        <test-method signature="isdisplayed()[pri:2, instance:testCases.Tc006_ListOfHospitals@38425407]" started-at="2026-01-27T09:32:01 IST" name="isdisplayed" finished-at="2026-01-27T09:32:10 IST" duration-ms="8994" status="PASS">
+        <test-method signature="isdisplayed()[pri:2, instance:testCases.Tc006_ListOfHospitals@27a0a5a2]" started-at="2026-02-02T10:01:03 IST" name="isdisplayed" finished-at="2026-02-02T10:01:15 IST" duration-ms="11995" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isdisplayed -->
-        <test-method signature="testListOfHospitals()[pri:3, instance:testCases.Tc006_ListOfHospitals@38425407]" started-at="2026-01-27T09:32:10 IST" name="testListOfHospitals" finished-at="2026-01-27T09:32:11 IST" duration-ms="1655" status="PASS">
+        <test-method signature="testListOfHospitals()[pri:3, instance:testCases.Tc006_ListOfHospitals@27a0a5a2]" started-at="2026-02-02T10:01:15 IST" name="testListOfHospitals" finished-at="2026-02-02T10:01:17 IST" duration-ms="1669" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testListOfHospitals -->
-        <test-method signature="writeIntoExcel()[pri:4, instance:testCases.Tc006_ListOfHospitals@38425407]" started-at="2026-01-27T09:32:11 IST" name="writeIntoExcel" finished-at="2026-01-27T09:32:14 IST" duration-ms="2908" status="PASS">
+        <test-method signature="writeIntoExcel()[pri:4, instance:testCases.Tc006_ListOfHospitals@27a0a5a2]" started-at="2026-02-02T10:01:17 IST" name="writeIntoExcel" finished-at="2026-02-02T10:01:19 IST" duration-ms="2677" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeIntoExcel -->
       </class> <!-- testCases.Tc006_ListOfHospitals -->
       <class name="testCases.Tc001_LoginTest">
-        <test-method signature="loginTest()[pri:1, instance:testCases.Tc001_LoginTest@41d477ed]" started-at="2026-01-27T09:31:35 IST" name="loginTest" finished-at="2026-01-27T09:31:36 IST" duration-ms="473" status="PASS">
+        <test-method signature="loginTest()[pri:1, instance:testCases.Tc001_LoginTest@40e4ea87]" started-at="2026-02-02T10:00:37 IST" name="loginTest" finished-at="2026-02-02T10:00:37 IST" duration-ms="751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
       </class> <!-- testCases.Tc001_LoginTest -->
       <class name="testCases.Tc004_HealthAndWellnessPlan">
-        <test-method signature="healthAndWellnessPlanTest()[pri:1, instance:testCases.Tc004_HealthAndWellnessPlan@2b71e916]" started-at="2026-01-27T09:31:37 IST" name="healthAndWellnessPlanTest" finished-at="2026-01-27T09:31:44 IST" duration-ms="6726" status="PASS">
+        <test-method signature="healthAndWellnessPlanTest()[pri:1, instance:testCases.Tc004_HealthAndWellnessPlan@6f0628de]" started-at="2026-02-02T10:00:40 IST" name="healthAndWellnessPlanTest" finished-at="2026-02-02T10:00:47 IST" duration-ms="6882" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at testCases.Tc004_HealthAndWellnessPlan.healthAndWellnessPlanTest(Tc004_HealthAndWellnessPlan.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- healthAndWellnessPlanTest -->
       </class> <!-- testCases.Tc004_HealthAndWellnessPlan -->
       <class name="testCases.Tc002_EnterCredentials">
-        <test-method signature="enterCredentials()[pri:1, instance:testCases.Tc002_EnterCredentials@74235045]" started-at="2026-01-27T09:31:36 IST" name="enterCredentials" finished-at="2026-01-27T09:31:37 IST" duration-ms="1318" status="PASS">
+        <test-method signature="enterCredentials()[pri:1, instance:testCases.Tc002_EnterCredentials@3704122f]" started-at="2026-02-02T10:00:38 IST" name="enterCredentials" finished-at="2026-02-02T10:00:40 IST" duration-ms="2705" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterCredentials -->

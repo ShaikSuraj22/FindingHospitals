@@ -1,0 +1,12 @@
+Assertion failed. The expected state wasn't met (data, visibility or URL).
+
+HOW TO FIX:
+• Print actual value in logs to compare with expected.
+• Add prerequisite waits to ensure the state is ready before asserting.
+• Re-check the test data or environment config (base.url, credentials).
+
+
+SUGGESTION:
+boolean visible = new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(10))
+        .until(org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img.img-responsive"))).isDisplayed();
+org.testng.Assert.assertTrue(visible, "Login image should be visible after clicking Login.");

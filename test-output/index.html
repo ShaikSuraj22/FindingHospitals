@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-All_Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">All Test Suite</span>
+              <span class="suite-name border-failed">All Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods failed suite-All_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-All_Test_Suite -->
+                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods failed suite-All_Test_Suite"> (show)</a> <!-- show-methods failed suite-All_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-All_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="testCases.Tc004_HealthAndWellnessPlan" class="method navigator-link" hash-for-method="healthAndWellnessPlanTest">healthAndWellnessPlanTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-All_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -114,11 +128,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_Test_Suite" title="testCases.Tc005_FormFillingTest" class="method navigator-link" hash-for-method="formFillingTest">formFillingTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="testCases.Tc004_HealthAndWellnessPlan" class="method navigator-link" hash-for-method="healthAndWellnessPlanTest">healthAndWellnessPlanTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -163,17 +172,65 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-All_Test_Suite" class="panel All_Test_Suite">
-          <div class="suite-All_Test_Suite-class-passed">
+          <div class="suite-All_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases.Tc001_LoginTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">testCases.Tc004_HealthAndWellnessPlan</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginTest">
-                  </a> <!-- loginTest -->
-                  <span class="method-name">loginTest</span>
+                  <a name="healthAndWellnessPlanTest">
+                  </a> <!-- healthAndWellnessPlanTest -->
+                  <span class="method-name">healthAndWellnessPlanTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at testCases.Tc004_HealthAndWellnessPlan.healthAndWellnessPlanTest(Tc004_HealthAndWellnessPlan.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-failed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Tc002_EnterCredentials</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterCredentials">
+                  </a> <!-- enterCredentials -->
+                  <span class="method-name">enterCredentials</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -189,6 +246,21 @@
                   <a name="clickOnLogoTest">
                   </a> <!-- clickOnLogoTest -->
                   <span class="method-name">clickOnLogoTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Tc003_SearchFunctionalityTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="locationAndSearchHospitalTest">
+                  </a> <!-- locationAndSearchHospitalTest -->
+                  <span class="method-name">locationAndSearchHospitalTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -232,36 +304,6 @@
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases.Tc002_EnterCredentials</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="enterCredentials">
-                  </a> <!-- enterCredentials -->
-                  <span class="method-name">enterCredentials</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-All_Test_Suite-class-passed -->
-          <div class="suite-All_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases.Tc004_HealthAndWellnessPlan</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="healthAndWellnessPlanTest">
-                  </a> <!-- healthAndWellnessPlanTest -->
-                  <span class="method-name">healthAndWellnessPlanTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-All_Test_Suite-class-passed -->
-          <div class="suite-All_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">testCases.Tc005_FormFillingTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -277,14 +319,14 @@
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases.Tc003_SearchFunctionalityTest</span>
+              <span class="class-name">testCases.Tc001_LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="locationAndSearchHospitalTest">
-                  </a> <!-- locationAndSearchHospitalTest -->
-                  <span class="method-name">locationAndSearchHospitalTest</span>
+                  <a name="loginTest">
+                  </a> <!-- loginTest -->
+                  <span class="method-name">loginTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -299,6 +341,10 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;All Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;utilities.ExtentReportManager&quot;/&gt;
+    &lt;listener class-name=&quot;utilities.HeuristicAiReportListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;C:/Users/2457259/OneDrive - Cognizant/Desktop/FindingHospitals&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testCases.BaseTest&quot;/&gt;
@@ -350,45 +396,45 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'clickOnLogoTest')
-data.setCell(0, 2, 'testCases.Tc007_StoringCities')
-data.setCell(0, 3, 13860);
+data.setCell(0, 1, 'isdisplayed')
+data.setCell(0, 2, 'testCases.Tc006_ListOfHospitals')
+data.setCell(0, 3, 11995);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'locationAndSearchHospitalTest')
-data.setCell(1, 2, 'testCases.Tc003_SearchFunctionalityTest')
-data.setCell(1, 3, 9898);
+data.setCell(1, 1, 'clickOnLogoTest')
+data.setCell(1, 2, 'testCases.Tc007_StoringCities')
+data.setCell(1, 3, 11312);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'isdisplayed')
-data.setCell(2, 2, 'testCases.Tc006_ListOfHospitals')
-data.setCell(2, 3, 8994);
+data.setCell(2, 1, 'locationAndSearchHospitalTest')
+data.setCell(2, 2, 'testCases.Tc003_SearchFunctionalityTest')
+data.setCell(2, 3, 7526);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'healthAndWellnessPlanTest')
 data.setCell(3, 2, 'testCases.Tc004_HealthAndWellnessPlan')
-data.setCell(3, 3, 6726);
+data.setCell(3, 3, 6882);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'formFillingTest')
-data.setCell(4, 2, 'testCases.Tc005_FormFillingTest')
-data.setCell(4, 3, 3804);
+data.setCell(4, 1, 'testFilterCardiologyHospitals')
+data.setCell(4, 2, 'testCases.Tc006_ListOfHospitals')
+data.setCell(4, 3, 3964);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testFilterCardiologyHospitals')
-data.setCell(5, 2, 'testCases.Tc006_ListOfHospitals')
-data.setCell(5, 3, 3479);
+data.setCell(5, 1, 'formFillingTest')
+data.setCell(5, 2, 'testCases.Tc005_FormFillingTest')
+data.setCell(5, 3, 3714);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'writeIntoExcel')
-data.setCell(6, 2, 'testCases.Tc006_ListOfHospitals')
-data.setCell(6, 3, 2908);
+data.setCell(6, 1, 'enterCredentials')
+data.setCell(6, 2, 'testCases.Tc002_EnterCredentials')
+data.setCell(6, 3, 2705);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testListOfHospitals')
+data.setCell(7, 1, 'writeIntoExcel')
 data.setCell(7, 2, 'testCases.Tc006_ListOfHospitals')
-data.setCell(7, 3, 1655);
+data.setCell(7, 3, 2677);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'enterCredentials')
-data.setCell(8, 2, 'testCases.Tc002_EnterCredentials')
-data.setCell(8, 3, 1318);
+data.setCell(8, 1, 'testListOfHospitals')
+data.setCell(8, 2, 'testCases.Tc006_ListOfHospitals')
+data.setCell(8, 3, 1669);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'loginTest')
 data.setCell(9, 2, 'testCases.Tc001_LoginTest')
-data.setCell(9, 3, 473);
+data.setCell(9, 3, 751);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
@@ -408,20 +454,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-All_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">7 ignored methods</span>
+            <span class="header-content">14 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testCases.Tc001_LoginTest</span>
+              <span class="ignored-class-name">testCases.Tc002_EnterCredentials</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">createDriverOnce</span>
                 <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testCases.Tc006_ListOfHospitals</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">createDriverOnce</span>
+                <span class="ignored-method-name">tearDownOnce</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -430,18 +471,24 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">createDriverOnce</span>
                 <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testCases.Tc002_EnterCredentials</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">createDriverOnce</span>
+                <span class="ignored-method-name">tearDownOnce</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testCases.Tc004_HealthAndWellnessPlan</span>
+              <span class="ignored-class-name">testCases.Tc003_SearchFunctionalityTest</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">createDriverOnce</span>
+                <br/>
+                <span class="ignored-method-name">tearDownOnce</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCases.Tc006_ListOfHospitals</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDownOnce</span>
+                <br/>
                 <span class="ignored-method-name">createDriverOnce</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
@@ -449,13 +496,26 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">testCases.Tc005_FormFillingTest</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDownOnce</span>
+                <br/>
                 <span class="ignored-method-name">createDriverOnce</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testCases.Tc003_SearchFunctionalityTest</span>
+              <span class="ignored-class-name">testCases.Tc004_HealthAndWellnessPlan</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDownOnce</span>
+                <br/>
+                <span class="ignored-method-name">createDriverOnce</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCases.Tc001_LoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDownOnce</span>
+                <br/>
                 <span class="ignored-method-name">createDriverOnce</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
@@ -478,62 +538,71 @@ return data;
               <div class="chronological-class-name">testCases.Tc001_LoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">6555 ms</span>
+                <span class="method-start">6524 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.Tc002_EnterCredentials</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">enterCredentials</span>
-                <span class="method-start">7038 ms</span>
+                <span class="method-start">7412 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.Tc004_HealthAndWellnessPlan</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">healthAndWellnessPlanTest</span>
-                <span class="method-start">8370 ms</span>
+                <span class="method-start">10117 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.Tc005_FormFillingTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">formFillingTest</span>
-                <span class="method-start">15098 ms</span>
+                <span class="method-start">17611 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.Tc003_SearchFunctionalityTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">locationAndSearchHospitalTest</span>
-                <span class="method-start">18903 ms</span>
+                <span class="method-start">21329 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.Tc006_ListOfHospitals</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testFilterCardiologyHospitals</span>
-                <span class="method-start">28801 ms</span>
+                <span class="method-start">28861 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">isdisplayed</span>
-                <span class="method-start">32282 ms</span>
+                <span class="method-start">32825 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testListOfHospitals</span>
-                <span class="method-start">41276 ms</span>
+                <span class="method-start">44826 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">writeIntoExcel</span>
-                <span class="method-start">42947 ms</span>
+                <span class="method-start">46509 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.Tc007_StoringCities</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">clickOnLogoTest</span>
-                <span class="method-start">45857 ms</span>
+                <span class="method-start">49186 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.BaseTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">tearDownOnce</span>
+                <span class="method-start">63099 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -1,5 +1,7 @@
 package pageObjects;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.*;
@@ -105,7 +107,9 @@ public class ListOfHospitals extends BasePage {
         Set<String> s = driver.getWindowHandles();
         List<String> li = new ArrayList<>(s);
         driver.switchTo().window(li.get(1));
+        //closing the new tab
         driver.close();
+        //Switching back to previous tab
         driver.switchTo().window(li.get(0));
         //Checking whether we are back to previous page, Now no need
 //        driver.findElement(By.xpath("//h2[@title='Pathway Hospitals']")).click();

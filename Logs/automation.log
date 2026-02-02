@@ -1,0 +1,63 @@
+2026-02-02 09:45:42 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:45:44 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:45:45 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:45:52 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:45:55 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:46:05 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:46:09 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:46:21 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:46:23 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 09:49:02 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:49:03 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:49:09 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:49:15 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:49:19 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:49:26 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:49:31 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:49:43 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:49:45 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 09:51:24 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:51:25 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:51:28 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:51:36 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:51:40 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:51:48 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:51:52 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:52:04 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:52:06 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 09:54:08 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:54:09 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:54:12 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:54:18 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:54:22 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:54:29 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:54:33 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:54:45 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:54:47 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 09:56:55 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:56:56 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:57:03 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:57:06 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:57:10 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:57:17 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:57:22 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:57:34 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:57:37 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 09:58:52 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:58:53 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:58:55 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:59:03 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:59:06 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:59:15 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:59:21 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:59:33 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:59:35 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 10:00:37 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 10:00:38 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 10:00:40 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 10:00:48 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 10:00:52 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 10:00:59 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 10:01:03 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 10:01:15 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 10:01:17 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started

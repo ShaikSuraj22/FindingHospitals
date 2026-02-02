@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AI-style Test Report (Heuristic + Gemini)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --bg:#0b1220; --panel:#0f172a; --border:#1f2937; --text:#e5e7eb; --muted:#94a3b8;
+  --ok:#22c55e; --fail:#ef4444; --skip:#f59e0b; --link:#93c5fd; --btn:#1f2937; --btnb:#334155;
+}
+*{box-sizing:border-box}
+body{margin:0;padding:20px;font-family:Segoe UI, Inter, Roboto, Arial, sans-serif;background:var(--bg);color:var(--text)}
+.container{max-width:1120px;margin:0 auto}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.h1{font-size:22px;font-weight:700}
+.small{color:var(--muted);font-size:12px}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{background:linear-gradient(180deg,#111827,#0b1320);border:1px solid var(--btnb);color:#e5e7eb;padding:8px 12px;border-radius:8px;cursor:pointer}
+.btn:hover{filter:brightness(1.1)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0 8px}
+@media (max-width: 780px){ .cards{grid-template-columns:1fr;}}
+.card{background:linear-gradient(180deg,#0f172a,#0b1320);border:1px solid var(--border);border-radius:12px;padding:14px;box-shadow:0 2px 16px rgba(0,0,0,.25)}
+.card .badge{display:inline-block;font-size:12px;border-radius:999px;padding:2px 8px;border:1px solid var(--btnb);color:#cbd5e1;margin-bottom:8px}
+.badge.ok{background:rgba(34,197,94,.12);border-color:rgba(34,197,94,.35);color:#86efac}
+.badge.fail{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.35);color:#fca5a5}
+.badge.skip{background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.35);color:#fcd34d}
+.card .num{font-size:28px;font-weight:700}
+.section{margin:26px 0}
+.kpi{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+canvas{max-width:260px;background:#0b1220;border-radius:12px;border:1px solid var(--border)}
+.legend{display:flex;gap:12px;flex-wrap:wrap}
+.legend span{display:flex;align-items:center;gap:6px;color:#94a3b8;font-size:13px}
+.dot{width:10px;height:10px;border-radius:50%}
+hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+.test-card{margin:12px 0;padding:12px;border-radius:10px;background:var(--panel);border:1px solid var(--border)}
+.failed,.passed,.skipped{border-left:4px solid transparent}
+.failed{border-left-color:#ef4444}
+.passed{border-left-color:#22c55e}
+.skipped{border-left-color:#f59e0b}
+summary{cursor:pointer;color:#93c5fd}
+pre{background:#0b1220;border:1px solid var(--border);border-radius:8px;padding:10px;white-space:pre-wrap;color:#cbd5e1}
+code{white-space:pre-wrap}
+img.sshot{max-width:100%;border-radius:8px;border:1px solid var(--border)}
+.h2{font-size:18px;margin:0 0 10px 0}
+.footer{margin-top:24px;color:#94a3b8;font-size:12px}
+@media print{
+  .actions{display:none}
+  body{background:#fff;color:#000}
+  .card,.test-card,pre{border-color:#ccc}
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <div class="h1">AI-style Test Report (Heuristic + Gemini)</div>
+        <div class="small">Suite: All Test Suite &nbsp;|&nbsp; Generated: 2026-02-02T10:01:39.320216500</div>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="downloadHtml()">⬇️ Download HTML</button>
+        <button class="btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <span class="badge ok">Passed</span>
+        <div class="num">9</div>
+      </div>
+      <div class="card">
+        <span class="badge fail">Failed</span>
+        <div class="num">1</div>
+      </div>
+      <div class="card">
+        <span class="badge skip">Skipped</span>
+        <div class="num">0</div>
+      </div>
+    </div>
+
+    <div class="section kpi">
+      <canvas id="summaryPie" width="260" height="260"></canvas>
+      <div class="legend">
+        <span><i class="dot" style="background:#22c55e"></i>Passed (9)</span>
+        <span><i class="dot" style="background:#ef4444"></i>Failed (1)</span>
+        <span><i class="dot" style="background:#f59e0b"></i>Skipped (0)</span>
+      </div>
+    </div>
+
+    <div class='section'><div class='h2'>Passed</div><div class='test-card passed'><b>testCases.Tc001_LoginTest.loginTest</b></div><div class='test-card passed'><b>testCases.Tc002_EnterCredentials.enterCredentials</b></div><div class='test-card passed'><b>testCases.Tc005_FormFillingTest.formFillingTest</b></div><div class='test-card passed'><b>testCases.Tc003_SearchFunctionalityTest.locationAndSearchHospitalTest</b></div><div class='test-card passed'><b>testCases.Tc006_ListOfHospitals.testFilterCardiologyHospitals</b></div><div class='test-card passed'><b>testCases.Tc006_ListOfHospitals.isdisplayed</b></div><div class='test-card passed'><b>testCases.Tc006_ListOfHospitals.testListOfHospitals</b></div><div class='test-card passed'><b>testCases.Tc006_ListOfHospitals.writeIntoExcel</b></div><div class='test-card passed'><b>testCases.Tc007_StoringCities.clickOnLogoTest</b></div></div>
+    
+    <div class='section'><div class='h2'>Failures (with Heuristic Analysis)</div><div class='test-card failed'><div><b>testCases.Tc004_HealthAndWellnessPlan.healthAndWellnessPlanTest</b></div><div class='small'><b>URL:</b> https://www.practo.com/plus/corporate</div><div style='margin-top:8px'><b>Screenshot:</b> <img class='sshot' src='screenshots/testCases.Tc004_HealthAndWellnessPlan_healthAndWellnessPlanTest.png'/></div><details class='details'><summary><b>Stack Trace</b></summary><pre><code>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at testCases.Tc004_HealthAndWellnessPlan.healthAndWellnessPlanTest(Tc004_HealthAndWellnessPlan.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</code></pre></details><details class='details'><summary><b>Recent Logs</b></summary><pre><code>2026-02-02 09:45:42 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:45:44 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:45:45 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:45:52 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:45:55 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:46:05 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:46:09 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:46:21 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:46:23 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 09:49:02 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:49:03 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:49:09 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:49:15 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:49:19 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:49:26 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:49:31 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:49:43 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:49:45 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 09:51:24 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:51:25 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:51:28 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:51:36 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:51:40 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:51:48 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:51:52 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:52:04 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:52:06 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 09:54:08 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:54:09 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:54:12 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:54:18 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:54:22 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:54:29 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:54:33 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:54:45 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:54:47 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 09:56:55 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:56:56 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:57:03 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:57:06 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:57:10 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:57:17 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:57:22 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:57:34 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:57:37 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 09:58:52 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:58:53 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:58:55 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:59:03 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:59:06 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:59:15 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:59:21 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:59:33 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:59:35 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 10:00:37 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 10:00:38 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 10:00:40 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started</code></pre></details><div class='h2' style='margin-top:14px'>Likely Root Cause</div><pre><code>Assertion failed. The expected state wasn't met (data, visibility or URL).</code></pre><div class='h2'>How to Fix</div><pre><code>• Print actual value in logs to compare with expected.
+• Add prerequisite waits to ensure the state is ready before asserting.
+• Re-check the test data or environment config (base.url, credentials).
+</code></pre><div class='h2'>Suggested Locator/Wait</div><pre><code>boolean visible = new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(10))
+        .until(org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img.img-responsive"))).isDisplayed();
+org.testng.Assert.assertTrue(visible, "Login image should be visible after clicking Login.");</code></pre><div class='h2'>Sanity Check to Add</div><pre><code>Add an assertion for URL contains '/login' or specific heading text.</code></pre><details class='details'><summary><b>Copilot Prompt (paste in IDE)</b></summary><pre><code>You are my coding assistant inside IntelliJ. Help me fix this failing Selenium+TestNG test.
+
+Test: testCases.Tc004_HealthAndWellnessPlan.healthAndWellnessPlanTest
+URL: https://www.practo.com/plus/corporate
+
+Stack trace (trimmed):
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at testCases.Tc004_HealthAndWellnessPlan.healthAndWellnessPlanTest(Tc004_HealthAndWellnessPlan.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.S
+
+Recent Logs (trimmed):
+2026-02-02 09:45:42 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:45:44 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:45:45 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:45:52 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:45:55 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:46:05 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:46:09 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:46:21 INFO  Tc006_ListOfHospitals:22 - List of Hospitals test started
+2026-02-02 09:46:23 INFO  Tc006_ListOfHospitals:54 - Writing Hospital Names to Excel test started
+2026-02-02 09:49:02 INFO  Tc001_LoginTest:19 - Click on login/signup button test started
+2026-02-02 09:49:03 INFO  Tc002_EnterCredentials:20 - Entering Credentials test started
+2026-02-02 09:49:09 INFO  Tc004_HealthAndWellnessPlan:15 - Health and Wellness Plan test started
+2026-02-02 09:49:15 INFO  Tc005_FormFillingTest:16 - Form Filling and Capture Screenshot test started
+2026-02-02 09:49:19 INFO  Tc003_SearchFunctionalityTest:15 - Location and Search Hospital test started
+2026-02-02 09:49:26 INFO  Tc006_ListOfHospitals:31 - Filter Cardiology Hospitals test started
+2026-02-02 09:49:31 INFO  Tc006_ListOfHospitals:41 - Is Displayed test started
+2026-02-02 09:
+
+Provide:
+1) Likely root cause in 1-2 sentences.
+2) Concrete code changes with Java snippets (locators/waits).
+3) A safer locator based on typical practo.com markup (prefer id, name, data-*; avoid brittle class).
+4) A sanity check I should add after the action.
+
+Keep it short and specific.
+</code></pre></details></div></div>
+
+    <hr/>
+    <div class="section">
+      <div class="h2">Suggested Additions</div>
+      <ul class="small">
+        <li><b>Flakiness tracking</b>: persist pass/fail history JSON per test.</li>
+        <li><b>Top failing locators</b>: parse stack traces and rank brittle selectors.</li>
+        <li><b>Timing insights</b>: capture time to first meaningful element with waits.</li>
+        <li><b>Environment fingerprint</b>: OS, browser, base URL, build number.</li>
+        <li><b>Auto-fix snippets</b>: embed ready-to-copy code for common failures.</li>
+      </ul>
+    </div>
+
+    <div class="footer">© 2026 — Generated locally. Buttons work offline.</div>
+  </div>
+
+  <script>
+  (function(){
+    var data = [9,1,0];
+    var colors = ['#22c55e','#ef4444','#f59e0b'];
+    var total = data.reduce(function(a,b){return a+b;}, 0) || 1;
+    var c = document.getElementById('summaryPie');
+    if(!c) return;
+    var ctx = c.getContext('2d');
+    var cx = c.width/2, cy = c.height/2, r = Math.min(cx,cy) - 10;
+    var start = -Math.PI/2;
+    for (var i=0;i<data.length;i++){
+      var angle = (data[i]/total)*Math.PI*2;
+      ctx.beginPath();
+      ctx.moveTo(cx,cy);
+      ctx.arc(cx,cy,r,start,start+angle);
+      ctx.closePath();
+      ctx.fillStyle = colors[i];
+      ctx.fill();
+      start += angle;
+    }
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.beginPath();
+    ctx.arc(cx,cy,r*0.6,0,Math.PI*2);
+    ctx.fill();
+    ctx.globalCompositeOperation = 'source-over';
+  })();
+
+  function downloadHtml(){
+    try {
+      var html = document.documentElement.outerHTML;
+      var blob = new Blob([html], {type:'text/html'});
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'ai-report.html';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function(){ URL.revokeObjectURL(a.href); document.body.removeChild(a); }, 500);
+    } catch(e) {
+      alert('Download failed: ' + e);
+    }
+  }
+  </script>
+
+</body>
+</html>

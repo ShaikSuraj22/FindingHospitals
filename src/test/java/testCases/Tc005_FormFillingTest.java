@@ -1,13 +1,19 @@
 package testCases;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.FillingFormAndCapture;
 
 public class Tc005_FormFillingTest extends BaseTest {
 
+    private static final Logger logger = LogManager.getLogger(Tc005_FormFillingTest.class);
+
+
     @Test(priority = 1)
     public void formFillingTest() {
+        logger.info("Form Filling and Capture Screenshot test started");
         FillingFormAndCapture ffc = new FillingFormAndCapture(driver);
         ffc.enterName("Suraj");
         ffc.enterOrganizationName("Cognizant");
